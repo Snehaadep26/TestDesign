@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onGoingTestFragment">
+    <fragment
+        android:id="@+id/onGoingTestFragment"
+        android:name="com.example.testdesign.Fragments.OnGoingTestFragment"
+        android:label="fragment_on_going_test1"
+        tools:layout="@layout/fragment_on_going_test1" >
+        <action
+            android:id="@+id/action_onGoingTestFragment_to_fragmentJeeMockTest"
+            app:destination="@id/fragmentJeeMockTest" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentJeeMockTest"
+        android:name="com.example.testdesign.Fragments.FragmentJeeMockTest"
+        android:label="fragment_jee_mock_test"
+        tools:layout="@layout/fragment_jee_mock_test" >
+        <action
+            android:id="@+id/action_fragmentJeeMockTest_to_jeeMockTest"
+            app:destination="@id/jeeMockTest" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeeMockTest"
+        android:name="com.example.testdesign.Fragments.JeeMockTest"
+        android:label="fragment_jee_mock_test2"
+        tools:layout="@layout/fragment_jee_mock_test2" >
+        <action
+            android:id="@+id/action_jeeMockTest_to_fragmentMathematicsJeeMockTest"
+            app:destination="@id/fragmentMathematicsJeeMockTest" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMathematicsJeeMockTest"
+        android:name="com.example.testdesign.Fragments.FragmentMathematicsJeeMockTest"
+        android:label="fragment_mathematics_jee_mock_test"
+        tools:layout="@layout/fragment_mathematics_jee_mock_test" >
+        <action
+            android:id="@+id/action_fragmentMathematicsJeeMockTest_to_fragmentMathsJeeMockTestQsn1"
+            app:destination="@id/fragmentMathsJeeMockTestQsn1" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMathsJeeMockTestQsn1"
+        android:name="com.example.testdesign.Fragments.FragmentMathsJeeMockTestQsn1"
+        android:label="fragment_maths_jee_mock_test_qsn1"
+        tools:layout="@layout/fragment_maths_jee_mock_test_qsn1" >
+        <action
+            android:id="@+id/action_fragmentMathsJeeMockTestQsn1_to_mathematics"
+            app:destination="@id/mathematics" />
+        <action
+            android:id="@+id/action_fragmentMathsJeeMockTestQsn1_to_physics"
+            app:destination="@id/physics" />
+        <action
+            android:id="@+id/action_fragmentMathsJeeMockTestQsn1_to_chemistry"
+            app:destination="@id/chemistry" />
+    </fragment>
+    <fragment
+        android:id="@+id/mathematics"
+        android:name="com.example.testdesign.Fragments.Mathematics"
+        android:label="fragment_mathematics"
+        tools:layout="@layout/fragment_mathematics" />
+    <fragment
+        android:id="@+id/physics"
+        android:name="com.example.testdesign.Fragments.Physics"
+        android:label="fragment_physics"
+        tools:layout="@layout/fragment_physics" />
+    <fragment
+        android:id="@+id/chemistry"
+        android:name="com.example.testdesign.Fragments.Chemistry"
+        android:label="fragment_chemistry"
+        tools:layout="@layout/fragment_chemistry" />
+</navigation>
